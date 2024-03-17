@@ -1,0 +1,10 @@
+---
+- name: Instalacja Nginx
+  hosts: "{{ hosts }}"
+  become: yes  # Włącza uprawnienia administratora
+  
+  tasks:
+    - name: Instalacja Nginx
+      apt:
+        name: nginx
+        state: present  # Upewnij się, że Nginx jest zainstalowany
